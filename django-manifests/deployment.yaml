@@ -1,0 +1,24 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  labels:
+    app: django-app
+  name: django-app
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: django-app
+  strategy: {}
+  template:
+    metadata:
+      labels:
+        app: django-app
+    spec:
+      containers:
+      - image: jai129/django-todo-app:3
+        name: django-todo-app
+        ports:
+        - containerPort: 8000
+        resources: {}
+status: {}
