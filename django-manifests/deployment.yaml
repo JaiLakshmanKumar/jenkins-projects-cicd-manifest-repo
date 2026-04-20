@@ -16,7 +16,7 @@ spec:
         app: django-app
     spec:
       containers:
-      - image: jai129/django-todo-app:16
+      - image: jai129/django-todo-app:17
         name: django-todo-app
         ports:
         - containerPort: 8000
